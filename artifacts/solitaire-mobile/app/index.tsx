@@ -216,7 +216,7 @@ export default function GameScreen() {
                   <CardView card={topCard} width={cardW} height={cardH} disabled />
                 </View>
               ) : (
-                <EmptySlot width={cardW} height={cardH} label={suitOrder[idx]} />
+                <EmptySlot width={cardW} height={cardH} onPress={() => handleFoundationPress(idx)} label={suitOrder[idx]} />
               )}
             </Pressable>
           );
