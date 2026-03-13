@@ -245,7 +245,7 @@ export default function GameScreen() {
               ]}
             >
               {pile.length === 0 ? (
-                <EmptySlot width={cardW} height={cardH} />
+                <EmptySlot width={cardW} height={cardH} onPress={() => handlePilePress(pileIdx)} />
               ) : (
                 pile.map((card, cardIdx) => {
                   const isTopCard = cardIdx === pile.length - 1;
