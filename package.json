@@ -1,0 +1,17 @@
+{
+  "name": "solitaire-cards",
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "start": "npx serve public -l 3000",
+    "test": "node ./scripts/run-tests.js",
+    "generate-cards": "node scripts/generate-cards-pngjs.cjs",
+    "fetch-cards": "node scripts/download-real-cards.js"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "jimp": "^1.6.0",
+    "jsdom": "^22.1.0",
+    "pngjs": "^7.0.0"
+  }
+}
