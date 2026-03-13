@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SolitaireCards</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <header>
+      <h1>SolitaireCards</h1>
+      <button id="newGame">New Game</button>
+      <button id="saveGame">Save</button>
+      <button id="loadGame">Load</button>
+      <button id="autoMove">Auto Move</button>
+    </header>
+    <main>
+      <section id="foundations" class="row"></section>
+      <section id="tableau" class="row"></section>
+      <section id="stock-waste" class="row">
+        <div id="stock" class="pile">Stock</div>
+        <div id="waste" class="pile">Waste</div>
+      </section>
+      <aside id="sidebar">
+        <h3>Progress</h3>
+        <div id="progress"></div>
+        <h4>Selected Sequence</h4>
+        <div id="selectedInfo">None</div>
+      </aside>
+    </main>
+    <script type="module" src="/src/app.js"></script>
+  </body>
+</html>

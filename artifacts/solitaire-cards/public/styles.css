@@ -1,0 +1,42 @@
+*{box-sizing:border-box;font-family:system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial}
+body{margin:16px;background:#0b4;color:#111}
+header{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.row{display:flex;gap:12px;margin-bottom:12px}
+.pile{width:80px;height:120px;border-radius:6px;background:#fff6;padding:8px;border:2px solid rgba(0,0,0,0.12);display:flex;align-items:center;justify-content:center}
+.card{width:72px;height:96px;border-radius:6px;background-color:#fff;display:flex;align-items:center;justify-content:center;border:1px solid #333;margin-bottom:6px}
+.facedown{background:linear-gradient(90deg,#444,#222);color:transparent}
+.faceup{background-color:#fff;}
+
+.pile.foundation, #waste {
+  /* let img inside handle sizing */
+}
+
+.card img,
+.pile.foundation img,
+#waste img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 6px;
+  pointer-events: none;
+}
+
+.tableau-col{display:flex;flex-direction:column;width:92px}
+.foundation{width:80px}
+main{display:flex;gap:24px}
+#sidebar{width:220px;background:rgba(255,255,255,0.9);padding:8px;border-radius:6px}
+.empty{background:rgba(255,255,255,0.06);height:120px;display:flex;align-items:center;justify-content:center}
+.tableau-col .card{cursor:pointer}
+
+button {
+  padding: 6px 14px;
+  border-radius: 4px;
+  border: 1px solid rgba(0,0,0,0.2);
+  background: rgba(255,255,255,0.85);
+  cursor: pointer;
+  font-size: 14px;
+}
+button:hover { background: rgba(255,255,255,1); }
+
+h1 { margin: 0; font-size: 1.4rem; color: #fff; }
+h3, h4 { margin: 6px 0 4px; }
