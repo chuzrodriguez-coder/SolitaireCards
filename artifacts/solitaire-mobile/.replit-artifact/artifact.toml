@@ -1,0 +1,27 @@
+kind = "mobile"
+previewPath = "/solitaire-mobile/"
+title = "SolitaireCards Mobile"
+version = "1.0.0"
+id = "artifacts/solitaire-mobile"
+router = "expo-domain"
+
+[[integratedSkills]]
+name = "expo"
+version = "1.0.0"
+
+[[services]]
+ensurePreviewReachable = "/status"
+localPort = 25129
+name = "expo"
+paths = ["/solitaire-mobile/"]
+
+[services.development]
+run = "pnpm --filter @workspace/solitaire-mobile run dev"
+
+[services.env]
+PORT = "25129"
+BASE_PATH = "/solitaire-mobile/"
+
+[services.production]
+build = ["pnpm", "--filter", "@workspace/solitaire-mobile", "run", "build"]
+run = ["pnpm", "--filter", "@workspace/solitaire-mobile", "run", "serve"]
