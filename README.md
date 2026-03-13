@@ -26,16 +26,29 @@ Notes
 
 - This is a small starting point. Game logic is intentionally minimal.
 
-## Card Thumbnails
-A script is included to generate 52 small PNG thumbnails for each card in the deck.
-Face cards receive a simple **sci-fi / astrology‑style blue star**.
-They are written to `public/cards` and can be used as background images or
-`<img>` elements in the UI.
+## Card Images
 
-To re‑generate the set after editing the script:
+The `public/cards/` directory contains all 52 playing-card PNG assets (222×323 RGBA)
+with a **sci-fi alien biotech theme**:
+
+- **Background**: Deep-space per suit (navy/maroon/amber-black/forest-black) + procedural starfield
+- **Suit palette**: Spades = neon cyan · Hearts = neon crimson · Diamonds = neon orange-red · Clubs = neon green
+- **Number cards (2–10)**: Standard pip layout with glowing suit symbols + hex circuit motif
+- **Aces**: Oversized glowing suit sigil + orbital circuit node ring
+- **Face cards (J/Q/K)**: Alien humanoid — 3-eyed spiked-crown King · arc-crown Queen · cyclops-visor Jack — with neon armour and biotech tentacle appendages
+- **Corner indices**: Rank + suit glyph top-left and bottom-right (rotated)
+
+### Regenerating all 52 cards
+
+Requires Python 3 with [Pillow](https://pillow.readthedocs.io/):
+
+```bash
+pip install Pillow
+python3 scripts/generate-scifi-cards.py
+```
+
+A legacy Node.js generator is also available (produces a simpler pixel-art style):
 
 ```bash
 npm run generate-cards
 ```
-
-Feel free to replace the generated images with more elaborate artwork!
